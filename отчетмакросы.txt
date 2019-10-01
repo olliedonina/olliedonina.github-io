@@ -1,0 +1,39 @@
+Макрос - это записанная последовательность команд, которую затем выполняет Excel.
+На уроке я сделала 3 макроса: макрос написания, макрос поиска и замены текста, макрос замены шрифта.
+Макрос написания выглядит так: 
+Sub печать()
+'
+' печать Макрос
+'
+' Сочетание клавиш: Ctrl+н
+'
+    ActiveCell.FormulaR1C1 = "academia-excel.ru"
+    Range("P6").Select
+End Sub
+
+Макрос поиска и замены выглядит так: 
+Sub замена()
+'
+' замена Макрос
+'
+' Сочетание клавиш: Ctrl+ц
+'
+    Cells.Replace What:="akademia-excel.ru", Replacement:="school", LookAt:= _
+        xlPart, SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+End Sub
+
+Макрос замены шрифта выглядит так:
+Sub заменашрифта()
+'
+' заменашрифта Макрос
+'
+' Сочетание клавиш: Ctrl+у
+'
+    Cells.Select
+    Range("K13").Activate
+    Selection.Font.Italic = True
+    Range("M11").Select
+End Sub
+
+Теперь я могу выполнять какое-то количество команд, используя всего лишь одно конкретное сочетание клавиш.
