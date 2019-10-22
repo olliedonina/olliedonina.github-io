@@ -1,0 +1,287 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title>Стили</title>
+  <style>
+    @font-face {
+      font-family: "Gothic";
+      src: url(https://berdges86.github.io/Kelly_Ann_Gothic.TTF);
+    }
+    
+    body {
+      display: inline-block;
+      flex-wrap: wrap;
+      background-color: black;
+      align-content: space-between;
+      overflow: hidden;
+    }
+    
+    .need_left {
+      position: fixed;
+      top: 20;
+    }
+    
+    .need_left1 {
+      position: fixed;
+      top: 60;
+    }
+    
+    .need_left2 {
+      position: fixed;
+      top: 100;
+    }
+    
+    .need_left3 {
+      position: fixed;
+      top: 140;
+    }
+    
+        .need_left4 {
+      position: fixed;
+      top: 180;
+    }
+    
+        .need_left5 {
+      position: fixed;
+      top: 220;
+    }
+    
+        .need_left6 {
+      position: fixed;
+      top: 260;
+    }
+    
+        .need_left7 {
+      position: fixed;
+      top: 300;
+    }
+    
+        .need_left8 {
+      position: fixed;
+      top: 340;
+    }
+    
+        .need_left9 {
+      position: fixed;
+      top: 380;
+    }
+    
+        .need_left10 {
+      position: fixed;
+      top: 420;
+    }
+    
+    .neon {
+      top: 30;
+      position: relative;
+      overflow: hidden;
+      filter: brightness(200%);
+    }
+    
+    .text {
+      font-family: "Gothic";
+      background-color: black;
+      color: white;
+      font-size: 40px;
+      font-weight: lighter;
+      user-select: none;
+    }
+    
+    .text::before {
+      content: attr(data-text);
+      position: absolute;
+      color: white;
+      filter: blur(0.02em);
+      mix-blend-mode: difference;
+    }
+    
+    .gradient {
+      position: absolute;
+      background: linear-gradient(45deg, red, gold, lightgreen, gold, red);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      mix-blend-mode: multiply;
+    }
+    
+    .spotlight {
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient( circle, white, transparent 25%) center / 25% 25%, radial-gradient( circle, white, black 25%) center / 12.5% 12.5%;
+      animation: light 5s linear infinite;
+      mix-blend-mode: color-dodge;
+    }
+    
+    @keyframes light {
+      to {
+        transform: translate(50%, 50%);
+      }
+    }
+  </style>
+  <script>
+    function er() {
+      var a = Number(document.getElementById("var_in").value);
+      var b = a;
+      var c = a*a;
+      var d = a*a*a;
+      a = a * a;
+      a = a * a;
+      document.getElementById("inf1").textContent = "a^4=" + a;
+      a = b;
+      a = a * a * a;
+      a = a * a;
+      document.getElementById("inf2").textContent = "a^6=" + a;
+      a = b;
+      a = a * a * a;
+      a = a * a * b;
+      document.getElementById("inf3").textContent = "a^7=" + a;
+      a = b;
+      a=a*a
+      a=a*a
+      a=a*a
+      document.getElementById("inf4").textContent = "a^8=" + a;
+      a=b
+      a=a*a
+      a=a*a
+      a=a*a
+      a=a*b
+       document.getElementById("inf5").textContent = "a^9=" + a;
+       b=a
+       c=a*a
+       a=a*a
+       a=a*a
+       a=a*a
+       a=a*c
+        document.getElementById("inf6").textContent = "a^10=" + a;
+        b=a
+        c=a*a
+        d=a*a*a
+        a=a*a
+        a=a*a
+        a=a*a
+        a=a*c
+        a=a*d
+         document.getElementById("inf7").textContent = "a^13=" + a;
+         b=a
+         d=a*a*a
+         a=a*a
+         a=a*a
+         a=a*d
+         a=a*a
+         a=a*b
+          document.getElementById("inf8").textContent = "a^15=" + a;
+          b=a
+          a=a*a*a
+          a=a*a
+          a=a*b
+          a=a*a*a
+           document.getElementById("inf9").textContent = "a^21=" + a;
+           b=a
+           c=a*a
+           a=c*c
+           a=a*c
+           a=a*b
+           a=a*a*a*a
+            document.getElementById("inf10").textContent = "a^28=" + a;
+            a=a*a
+            a=a*a
+            a=a*a
+            a=a*a
+            a=a*a
+            a=a*a
+             document.getElementById("inf11").textContent = "a^64=" + a;
+
+
+    }
+  </script>
+</head>
+
+<body>
+  <div class="need_left">
+    <div class="neon">
+      <span class="text" data-text="" id="inf1"></span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+  <div class="need_left1">
+    <div class="neon">
+      <span class="text" data-text="" id="inf2"></span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+  <div class="need_left2">
+    <div class="neon">
+      <span class="text" data-text="" id="inf3"></span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+    <div class="need_left3">
+    <div class="neon">
+      <span class="text" data-text="" id="inf4"></span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+  <div class="need_left4">
+    <div class="neon">
+      <span class="text" data-text="" id="inf5"></span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+    <div class="need_left5">
+    <div class="neon">
+      <span class="text" data-text="" id="inf6"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+    <div class="need_left6">
+    <div class="neon">
+      <span class="text" data-text="" id="inf7"></span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+    <div class="need_left7">
+    <div class="neon">
+      <span class="text" data-text="" id="inf8"></span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+    <div class="need_left8">
+    <div class="neon">
+      <span class="text" data-text="" id="inf9"></span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+    <div class="need_left9">
+    <div class="neon">
+      <span class="text" data-text="" id="inf10"></span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+     <div class="need_left10">
+    <div class="neon">
+      <span class="text" data-text="" id="inf11"></span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+
+  <button onclick="er()">1.61</button>
+  <input type="text" value="" id="var_in">
+</body>
+
+</html>
+
