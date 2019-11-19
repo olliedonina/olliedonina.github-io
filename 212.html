@@ -84,11 +84,10 @@
       var ab = Number(document.getElementById("var_in").value);
       document.getElementById("inf1").innerHTML = "десятков " + (ab - ab % 10) / 10 + "<br>единиц " + ab % 10 + "<br>их сумма=" + (ab % 10 + (ab - ab % 10) / 10) + "<br>их произведение=" + (ab % 10 * (ab - ab % 10) / 10);
     }
-
-    function er3() {
+    function er1() {
       document.getElementById("inf1").textContent="";
       var abc = document.getElementById("var_in").value;
-       document.getElementById("inf1").innerHTML = "сотен" + (abc - abc % 100) / 100 + "<br>десятков " + (abc - abc % 10) / 10 + "<br>единиц " + abc % 10 + "<br>их сумма=" + (abc % 100 + (abc % 10) + (abc - abc % 10) / 10) + "<br>их произведение=" + (abc % 100 * (abc % 10) * (abc - abc % 10) / 10);
+       document.getElementById("inf1").innerHTML = "сотен" + (abc - abc % 100) / 100 + "<br>десятков " + ((abc - abc % 10) / 10 - (abc - abc % 100) / 10) + "<br>единиц " + abc % 10 + "<br>их сумма=" + ((abc - abc % 100) / 100 + ((abc - abc % 10) / 10 - (abc - abc % 100) / 10) + abc % 10) + "<br>их произведение=" +(((abc - abc % 100) / 100) * ((abc - abc % 10) / 10 - (abc - abc % 100) / 10) * (abc % 10));
     }
   </script>
 </head>
@@ -108,3 +107,4 @@
 </body>
 
 </html>
+
