@@ -129,7 +129,7 @@
       var ctx = canvas.getContext('2d');
       ctx.beginPath();
       for (x = -1; x <= 64; x = x + 0.1) {
-        ctx.lineTo(x * 50 - 186, 50 * (Math.cos(x) + Math.sin(2*x)) - 25 + 240);
+        ctx.lineTo(x * 50 - 151, 50 * (Math.cos(x) + Math.sin(2*x)) - 25 + 240);
       }
       ctx.strokeStyle = "black";
       ctx.lineTo(640, 240);
@@ -138,7 +138,7 @@
       ctx.fill();
       ctx.stroke();
       ctx.closePath();
-      drawpoint();
+      drawpoint2();
       x = Number(document.getElementById("x_znach").value);
       y = Number(document.getElementById("y_znach").value);
       if ((Math.cos(x) -Math.sin(2*x) +0.5) <0)  {
@@ -170,17 +170,30 @@
       ctx.arc(x, y, 1.5, 0, 2 * Math.PI);
       ctx.stroke();
     }
+    
+      function drawpoint2() {
+      x = Number(document.getElementById("x_znach").value);
+      y = Number(document.getElementById("y_znach").value);
+      x = 320 + x * 50;
+      y = 240 - y * 50;
+      var canvas = document.getElementById('example');
+      var ctx = canvas.getContext('2d');
+      ctx.beginPath();
+      ctx.strokeStyle = 'black';
+      ctx.arc(x, y, 1.5, 0, 2 * Math.PI);
+      ctx.stroke();
+    }
   </script>
 </head>
  
 <body>
   x=
-  <input type="text" value="0.5" id="x_znach"> y=
-  <input type="text" value="-1" id="y_znach">
+  <input type="text" value="0" id="x_znach"> y=
+  <input type="text" value="1.5" id="y_znach">
   <a href="#" onclick="clean()" class="button purple">Очистить</a>
   <a href="#" onclick="er1()" class="button purple">Графики</a>
   <a href="#" onclick="er2()" class="button purple">cos(1/2)x -0.5<0 </a>
-  <a href="#" onclick="er3()" class="button purple">cosx -sin2x +0.5<0 </a>
+  <a href="#" onclick="er3()" class="button purple">cos(x) -sin(2*x) +0.5<0 </a>
   <br>
   <canvas width='640' height='480' id='example'>Обновите браузер</canvas>
   <br>
