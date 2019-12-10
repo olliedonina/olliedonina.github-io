@@ -136,8 +136,16 @@
       ctx.lineTo(0, 240);
       ctx.fillStyle = "blue";
       ctx.fill();
+         ctx.stroke();
+      ctx.closePath();
+      ctx.beginPath();
+      x0 = 320 + 1* 50;
+      y0 = 240 - 1* 50;
+      ctx.arc(x0, y0, 1.5, 0, 2 * Math.PI);
       ctx.stroke();
       ctx.closePath();
+     
+
       drawpoint2();
       x = Number(document.getElementById("x_znach").value);
       y = Number(document.getElementById("y_znach").value);
