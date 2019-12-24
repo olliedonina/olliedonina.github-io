@@ -138,14 +138,28 @@
       ctx.fill();
          ctx.stroke();
       ctx.closePath();
-      ctx.beginPath();
-      x0 = 320 + 1* 50;
-      y0 = 240 - 1* 50;
-      ctx.arc(x0, y0, 1.5, 0, 2 * Math.PI);
+ ctx.beginPath();
+      x0 = 0.13*50+ 50*(Math.PI*2*0 + 2.89684);
+      ctx.arc(x0, 240, 4, 0, 2 * Math.PI);
       ctx.stroke();
       ctx.closePath();
+       ctx.beginPath();
+     x1 = 0.13*50+ 50*(Math.PI*2*1 + 2.89684);
+      ctx.arc(x1, 240, 4, 0, 2 * Math.PI);
+      ctx.stroke();
+      ctx.closePath();
+      ctx.beginPath();
+       x2 = 0.13*50+ 50*(Math.PI*2*2 - 1.73987);
+      ctx.arc(x2, 240, 4, 0, 2 * Math.PI);
+      ctx.stroke();
+      ctx.closePath();
+       ctx.beginPath();
+       x3 = 0.13*50+  50*(Math.PI*2*1 - 1.73987);
+      ctx.arc(x3, 240, 4, 0, 2 * Math.PI);
+      ctx.stroke();
+      ctx.closePath()
+      
      
-
       drawpoint2();
       x = Number(document.getElementById("x_znach").value);
       y = Number(document.getElementById("y_znach").value);
@@ -154,6 +168,18 @@
       } else {
         document.getElementById("otvet").innerHTML = x + " " + (Math.cos(x) -Math.sin(2*x) +0.5)+ "Точка в области, где ф-ция больше 0";
       }
+   {   document.getElementById("otvet").innerHTML =  document.getElementById("otvet").innerHTML 
++"<br>" + ( Math.PI*2*2 - 1.73987)
+
++"<br>" + (  Math.PI*2*1 - 1.73987)
+ }
+    { document.getElementById("otvet").innerHTML =  document.getElementById("otvet").innerHTML 
++"<br>" + ( Math.PI*2*0 + 2.89684)
+
++"<br>" + (Math.PI*2*1 + 2.89684)
+}
+     
+      
       ctx.closePath();
       ctx.beginPath();
       ctx.strokeStyle = 'red';
