@@ -90,12 +90,14 @@
           document.getElementById(temp1).appendChild(z);
           l += 2;
         }
+       
+      
    
       }
 
       addanswer();
       document.getElementById("answ1").innerHTML = sum1
-     
+      u=1;
       sum1 = 0;
       
     }
